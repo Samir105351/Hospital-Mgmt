@@ -1,0 +1,100 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.DatePicker?>
+<BorderPane id="myBorder" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <StackPane id="myStackPane" prefWidth="600" prefHeight="400">
+            <Rectangle width="600" height="400" styleClass="background-rectangle" />
+            <VBox id="myVBox" alignment="CENTER" spacing="20" fx:id="myVBox">
+                <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Hospital Management System" />
+                <HBox alignment="CENTER" spacing="10">
+                    <Label style="-fx-font-weight: bold;" text="Username:" />
+                    <TextField fx:id="usernameField" promptText="Enter your username" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <Label style="-fx-font-weight: bold;" text="Password:" />
+                    <PasswordField fx:id="passwordField" promptText="Enter your password" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <Label style="-fx-font-weight: bold;" text="User Type:" />
+                    <ComboBox fx:id="userTypeComboBox" style="-fx-font-weight: bold;">
+                        <items >
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Doctor" />
+                                <String fx:value="Patient" />
+                                <String fx:value="Admin" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                </HBox>
+                <Button onAction="#loginButtonAction" style="-fx-font-weight: bold;" text="Log In" />
+
+                <Hyperlink onAction="#signUpAction" style="-fx-font-weight: bold;">
+                    Not registered? Click here to sign up.
+                </Hyperlink>
+            </VBox>
+            <VBox id="myVBox2" alignment="CENTER" spacing="20" fx:id="myVBox2" visible="false">
+                <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Sign Up" />
+                <HBox alignment="CENTER" spacing="10">
+                    <Label style="-fx-font-weight: bold;" text="First Name:" />
+                    <TextField fx:id="firstNameField" promptText="Enter your first name" />
+                    <Label style="-fx-font-weight: bold;" text="Last Name:" />
+                    <TextField fx:id="lastNameField" promptText="Enter your last name" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <Label style="-fx-font-weight: bold;" text="          Email:" />
+                    <TextField fx:id="emailField" promptText="Enter your email" />
+                    <Label style="-fx-font-weight: bold;" text="  Phone No:" />
+                    <TextField fx:id="phoneNoField" promptText="Enter your phone number" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <Label style="-fx-font-weight: bold;" text="Date of Birth:" />
+                    <DatePicker fx:id="dobDatePicker" promptText="Select your date of birth" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <Label style="-fx-font-weight: bold;" text="User Type:" />
+                    <ComboBox fx:id="userTypeSignInComboBox" style="-fx-font-weight: bold;">
+                        <items >
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Doctor" />
+                                <String fx:value="Patient" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <Label style="-fx-font-weight: bold;" text="Gender:" />
+                    <ComboBox fx:id="genderComboBox" style="-fx-font-weight: bold;">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Male" />
+                                <String fx:value="Female" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <Label style="-fx-font-weight: bold;" text="Enter New Password:" />
+                    <PasswordField  fx:id="newPassword" promptText="Enter New Password" />
+                    <Label style="-fx-font-weight: bold;" text="Confirm Password" />
+                    <PasswordField fx:id="confirmPassword" promptText="Confirm Password" />
+                </HBox>
+
+                <Button onAction="#signInButtonAction" style="-fx-font-weight: bold;" text="Sign Up" />
+
+                <Hyperlink onAction="#backToLoginAction" style="-fx-font-weight: bold;">
+                    Already signed up? Click here to login.
+                </Hyperlink>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

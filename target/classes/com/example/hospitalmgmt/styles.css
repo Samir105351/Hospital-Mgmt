@@ -1,0 +1,18 @@
+/* Style for the StackPane */
+#myStackPane {
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-background-insets: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
+
+/* Style for the Rectangle (background) */
+.background-rectangle {
+    -fx-fill: rgba(255, 255, 255, 0.75); /* Set your desired background color and transparency here */
+}
+#myBorder {
+    -fx-background-image: url('background.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
